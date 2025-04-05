@@ -5,8 +5,9 @@ body {
 
 p {
     display: inline-block;
-    text-align: justify;
-    font-family:DM Sans ;
+    text-align: left;
+    font-family:"DM Sans" ;
+    line-height: 15px;
 }
 
 
@@ -17,11 +18,12 @@ p {
     /* margin-left: auto;
     margin-right: auto; */
     position: absolute;
-    left: 13%;
+    left: 15%;
+    top: 40px;
 
     display: grid;
-    gap: max(18px,1vw);
-    border: 30px solid black;
+    gap: min(18px,1.5vw);
+    /* border: 30px solid black; */
     /* grid-template-columns: 70px 70px 70px 70px; */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1.25fr 0.334fr 0.667fr 1fr;
@@ -29,8 +31,13 @@ p {
 
 }
 .highlight{
-    font-weight: bold;
+    font-weight:620;
+    opacity: 0.9;
 }
+.small-text {
+    font-size: 11px;
+}
+
 .box {
     display: inline-block;
     position: absolute;
@@ -40,6 +47,7 @@ p {
 }
 .box-1 {
     background-color: hsl(256, 67%, 59%);
+    color: white;
     /* width: 100%; */
     /* padding: 1rem; */
     /* margin: 1rem; */
@@ -52,14 +60,36 @@ p {
 
 }
 .box-1 img {
-    width: 60px;
-    height: 50px;
+    width: min(40%,145px);
+    height: 25px;
     object-fit: contain;
+    left: 30%;
+    right: 20%;
+    top: 56%;
+
+}
+.box-1 .highlight-big {
+    text-align: center;
+    font-size: max(min(2rem,4.45vw),1.82rem);
+    line-height: 35px;
+    
+    top: -4%;
+    left: 2.5%;
+    right: 2.5%;
+
+    
+}
+.box-1 .small-text{
+    top: 65%;
+    left: 30%;
+    right: 20%;
+    font-size: max(12px,1.1vw);
+
 }
 
 
 .box-2 {
-    background-color: hsl(0, 0%, 100%);
+    background-color: #FEFEFF;
     /* padding: 1rem; */
     grid-column: 2/3;
     grid-row: 2/4;
@@ -68,9 +98,19 @@ p {
     
 }
 .box-2 img {
-    width: 60px;
-    height: 50px;
-    object-fit: contain;
+    width: 90%;
+    height: 30%;
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    object-fit: cover;
+    object-position: left;
+    right: 0%;
+    top: 2%;
+}
+.box-2 .highlight {
+    top: 30%;
+    left: 10%;
+    right: 15%;
 }
 .box-3 {
     background-color: hsl(39, 100%, 71%);
@@ -82,9 +122,16 @@ p {
     
 }
 .box-3 img {
-    width: 60px;
-    height: 50px;
-    object-fit: contain;
+    width: 80%;
+    height: 35%;
+    object-fit: cover;
+    object-position: top;
+    bottom: 0%;
+    right: 10%;
+}
+.box-3 .highlight {
+    left: 10%;
+    right: 10%;
 }
 
 .box-4 {
@@ -103,23 +150,24 @@ p {
     /* position:relative;
     right: -1.5vw; */
    position: absolute;
-   top: 20%;
+   top: 18%;
    right: 0%;
     object-fit: cover;
     object-position: left;
 }
 .box-4 .highlight {
     left: 10%;
+    top: 1%;
 }
 .box-4 .small-text {
     position: absolute;
     left: 10%;
-    bottom: 20px;
-    
+    top: 66%;
 }
 
 .box-5 {
     background-color: hsl(256, 67%, 59%);
+    color: white;
     /* padding: 1rem; */
     grid-column: 3/5;
     grid-row: 4/5;
@@ -128,9 +176,10 @@ p {
     
 }
 .box-5 img {
-    width: 60px;
-    height: 50px;
+    height: 90%;
+    width: max(30%,80px);
     object-fit: contain;
+    left: 3.5%;
 }
 
 .box-6 {
